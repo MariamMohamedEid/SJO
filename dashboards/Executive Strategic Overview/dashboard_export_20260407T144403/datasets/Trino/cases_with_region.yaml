@@ -1,0 +1,229 @@
+table_name: cases_with_region
+main_dttm_col: filing_date
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: null
+sql: "SELECT\n    CASE co.governorate_name_en\n        WHEN 'Muscat'             THEN\
+  \ 'OM-MA'\n        WHEN 'Dhofar'             THEN 'OM-ZU'\n        WHEN 'Musandam'\
+  \           THEN 'OM-MU'\n        WHEN 'Al Buraimi'         THEN 'OM-BU'\n     \
+  \   WHEN 'Ad Dakhiliyah'      THEN 'OM-DA'\n        WHEN 'North Al Batinah'   THEN\
+  \ 'OM-BS'\n        WHEN 'South Al Batinah'   THEN 'OM-BJ'\n        WHEN 'North Al\
+  \ Sharqiyah' THEN 'OM-SS'\n        WHEN 'South Al Sharqiyah' THEN 'OM-SJ'\n    \
+  \    WHEN 'Al Wusta'           THEN 'OM-WU'\n        WHEN 'Al Dhahirah'        THEN\
+  \ 'OM-ZA'\n        ELSE co.governorate_name_en\n    END                        \
+  \     AS region,\n    f.case_key,\n    f.case_category,\n    f.status_category,\n\
+  \    f.court_level,\n    f.case_duration_days,\n    f.judicial_fees_amount,\n  \
+  \  f.execution_revenue,\n    f.claim_amount,\n    co.court_name_en,\n    co.governorate_name_en,\n\
+  \    co.wilayat_name_en,\n    d.full_date                     AS filing_date,\n\
+  \    d.year                          AS filing_year,\n    d.month              \
+  \           AS filing_month,\n    d.quarter                       AS filing_quarter\n\
+  FROM iceberg.marts.fact_cases           f\nJOIN iceberg.marts.dim_court        \
+  \    co  ON f.court_key       = co.court_key\nJOIN iceberg.marts.dim_date      \
+  \       d   ON f.filing_date_key = d.date_key\nJOIN iceberg.marts.dim_circuit  \
+  \        ci  ON f.circuit_key     = ci.circuit_key\nLEFT JOIN iceberg.marts.dim_judge\
+  \       j   ON f.judge_key       = j.judge_key\nJOIN iceberg.marts.dim_case_status\
+  \      s   ON f.status_key      = s.status_key"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 8ad19dc5-41af-43dc-9f2a-1e6001d2b21e
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: judicial_fees_amount
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: DECIMAL(12, 3)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: execution_revenue
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: DECIMAL(12, 3)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: claim_amount
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: DECIMAL(18, 3)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: wilayat_name_en
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: VARCHAR
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: court_name_en
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: VARCHAR
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: case_category
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: VARCHAR
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: status_category
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: VARCHAR
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: case_key
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: VARCHAR
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: court_level
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: VARCHAR
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: region
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: VARCHAR
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: filing_date
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: DATE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: case_duration_days
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: BIGINT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: filing_quarter
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: filing_year
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: filing_month
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+version: 1.0.0
+database_uuid: 8a6842fc-8045-4b2d-aebd-d7ab01811fb3

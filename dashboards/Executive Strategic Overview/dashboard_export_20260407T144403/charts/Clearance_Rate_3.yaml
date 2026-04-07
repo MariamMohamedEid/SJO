@@ -1,0 +1,49 @@
+slice_name: Clearance Rate
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 7__table
+  viz_type: big_number_total
+  metric:
+    expressionType: SQL
+    sqlExpression: 'CAST(SUM(CASE WHEN status_category = ''Closed'' THEN 1 ELSE 0
+      END) AS DOUBLE)
+
+      / COUNT(case_key)'
+    column: null
+    aggregate: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: 'CAST(SUM(CASE WHEN status_category = ''Closed'' THEN 1 ELSE 0 END) AS
+      DOUBLE)
+
+      / COUNT(case_key)'
+    optionName: metric_l39mzv508qe_rlrw9nrjn3j
+  adhoc_filters:
+  - clause: WHERE
+    subject: filing_date
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    expressionType: SIMPLE
+  subheader: Clearance Rate
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  y_axis_format: ',.1%'
+  time_format: smart_date
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 1
+query_context: '{"datasource":{"id":7,"type":"table"},"force":false,"queries":[{"filters":[{"col":"filing_date","op":"TEMPORAL_RANGE","val":"No
+  filter"}],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[{"expressionType":"SQL","sqlExpression":"CAST(SUM(CASE
+  WHEN status_category = ''Closed'' THEN 1 ELSE 0 END) AS DOUBLE)\n/ COUNT(case_key)","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"CAST(SUM(CASE
+  WHEN status_category = ''Closed'' THEN 1 ELSE 0 END) AS DOUBLE)\n/ COUNT(case_key)","optionName":"metric_l39mzv508qe_rlrw9nrjn3j"}],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"7__table","viz_type":"big_number_total","metric":{"expressionType":"SQL","sqlExpression":"CAST(SUM(CASE
+  WHEN status_category = ''Closed'' THEN 1 ELSE 0 END) AS DOUBLE)\n/ COUNT(case_key)","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"CAST(SUM(CASE
+  WHEN status_category = ''Closed'' THEN 1 ELSE 0 END) AS DOUBLE)\n/ COUNT(case_key)","optionName":"metric_l39mzv508qe_rlrw9nrjn3j"},"adhoc_filters":[{"clause":"WHERE","subject":"filing_date","operator":"TEMPORAL_RANGE","comparator":"No
+  filter","expressionType":"SIMPLE"}],"subheader":"Clearance Rate","header_font_size":0.4,"subheader_font_size":0.15,"y_axis_format":",.1%","time_format":"smart_date","conditional_formatting":[],"extra_form_data":{},"dashboards":[1],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: bbc132a0-4c67-44c3-9b69-7c8d8362e44d
+version: 1.0.0
+dataset_uuid: 39471eba-cbaa-4b4f-8fe8-4fc06ad5f411

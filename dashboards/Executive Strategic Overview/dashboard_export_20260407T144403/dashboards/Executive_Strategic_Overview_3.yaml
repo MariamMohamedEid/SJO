@@ -1,0 +1,554 @@
+dashboard_title: Executive Strategic Overview
+description: null
+css: ".dashboard {\n    background-color: #F5F5F0;\n    font-family: 'Arial', sans-serif;\n\
+  }\n\n.header-title {\n    color: #1A2332;\n}\n\n.chart-container {\n    border-radius:\
+  \ 8px;\n    box-shadow: 0 2px 8px rgba(0,0,0,0.08);\n    background: #FFFFFF;\n\
+  }\n\n.dragdroppable-column {\n    background: transparent;\n}\n\n/* Big number chart\
+  \ color */\n.chart-header {\n    color: #007A7A;\n    font-weight: 600;\n}\n\n/*\
+  \ Make chart titles teal */\n.slice_description {\n    color: #007A7A;\n}\n/* Force\
+  \ teal as primary chart color */\n.rv-xy-plot__series--line path {\n    stroke:\
+  \ #007A7A;\n}\n\n.recharts-bar-rectangle path {\n    fill: #007A7A;\n}\n\n/* Big\
+  \ number KPI color */\n.superset-legacy-chart-big-number .header-line {\n    color:\
+  \ #007A7A !important;\n}"
+slug: null
+certified_by: ''
+certification_details: ''
+published: true
+uuid: e0c30864-c92f-47d5-b441-29a6b038616d
+position:
+  CHART-explore-18-1:
+    children: []
+    id: CHART-explore-18-1
+    meta:
+      chartId: 18
+      height: 50
+      sliceName: YoY Case Growth
+      uuid: cb2ef8af-908d-49d6-b53f-d50f10642aff
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-cjpEqybfm6Z
+    type: CHART
+  CHART-explore-19-1:
+    children: []
+    id: CHART-explore-19-1
+    meta:
+      chartId: 19
+      height: 50
+      sliceName: Average Case Duration Trend [Q]
+      uuid: 6cbcdc74-7306-4ba2-abf7-f9bacd60ac9f
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-cjpEqybfm6Z
+    type: CHART
+  CHART-explore-20-1:
+    children: []
+    id: CHART-explore-20-1
+    meta:
+      chartId: 20
+      height: 50
+      sliceName: Clearance Rate by Governorate
+      uuid: 433e3d19-44ed-410c-854e-2fd6db397fbf
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zJ-WeGcabd
+    type: CHART
+  CHART-explore-21-1:
+    children: []
+    id: CHART-explore-21-1
+    meta:
+      chartId: 21
+      height: 50
+      sliceName: Case Volume by Governorate
+      uuid: b8b3e6f9-7cef-40ed-a572-83945d130327
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-NwywOoXW_p
+    type: CHART
+  CHART-explore-23-1:
+    children: []
+    id: CHART-explore-23-1
+    meta:
+      chartId: 23
+      height: 50
+      sliceName: Filed vs Closed Cases
+      uuid: 5d86c30c-0b36-475e-b566-15ab9f7bab8d
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-AcqK9by30p
+    type: CHART
+  CHART-explore-24-1:
+    children: []
+    id: CHART-explore-24-1
+    meta:
+      chartId: 24
+      height: 50
+      sliceName: Case By Governorate
+      uuid: 064301be-00b2-4bd5-a2ec-dd50145a524e
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-NwywOoXW_p
+    type: CHART
+  CHART-uB7w5zn_DCw:
+    children: []
+    id: CHART-uB7w5zn_DCw
+    meta:
+      chartId: 3
+      height: 50
+      sliceName: Clearance Rate
+      uuid: bbc132a0-4c67-44c3-9b69-7c8d8362e44d
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-cjpEqybfm6Z
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - HEADER-M4NQdazqV-y
+    - ROW-cjpEqybfm6Z
+    - ROW-NwywOoXW_p
+    - ROW-AcqK9by30p
+    - ROW-zJ-WeGcabd
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER-M4NQdazqV-y:
+    children: []
+    id: HEADER-M4NQdazqV-y
+    meta:
+      background: BACKGROUND_WHITE
+      headerSize: LARGE_HEADER
+      text: "Judicial Performance Overview \u2014 \u0627\u0644\u0645\u062C\u0644\u0633\
+        \ \u0627\u0644\u0623\u0639\u0644\u0649 \u0644\u0644\u0642\u0636\u0627\u0621"
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: HEADER
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Executive Strategic Overview
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-AcqK9by30p:
+    children:
+    - CHART-explore-23-1
+    id: ROW-AcqK9by30p
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-NwywOoXW_p:
+    children:
+    - CHART-explore-21-1
+    - CHART-explore-24-1
+    id: ROW-NwywOoXW_p
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-cjpEqybfm6Z:
+    children:
+    - CHART-uB7w5zn_DCw
+    - CHART-explore-18-1
+    - CHART-explore-19-1
+    id: ROW-cjpEqybfm6Z
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-zJ-WeGcabd:
+    children:
+    - CHART-explore-20-1
+    id: ROW-zJ-WeGcabd
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  chart_configuration:
+    '19':
+      id: 19
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 3
+        - 18
+        - 20
+        - 21
+        - 23
+        - 24
+    '20':
+      id: 20
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 3
+        - 18
+        - 19
+        - 21
+        - 23
+        - 24
+    '21':
+      id: 21
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 3
+        - 18
+        - 19
+        - 20
+        - 23
+        - 24
+    '23':
+      id: 23
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 3
+        - 18
+        - 19
+        - 20
+        - 21
+        - 24
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 3
+    - 18
+    - 19
+    - 20
+    - 21
+    - 23
+    - 24
+  color_scheme: supersetColors
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors:
+    Active: '#007A7A'
+    Closed: '#C9A84C'
+    Suspended: '#1A2332'
+    Civil: '#007A7A'
+    Criminal: '#C9A84C'
+    Commercial: '#1A2332'
+    Labour: '#4A9A8A'
+    Personal Status: '#8B7355'
+    Rental: '#5B8FA8'
+    Tax: '#854F0B'
+    Juvenile: '#6B8E23'
+    Blood Money: '#8B0000'
+    First Instance: '#007A7A'
+    Appeal: '#C9A84C'
+    Supreme: '#1A2332'
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: true
+  default_filters: '{}'
+  native_filter_configuration:
+  - id: NATIVE_FILTER-MeOGqnhpTB
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: Case Category
+    filterType: filter_select
+    targets:
+    - column:
+        name: case_category
+      datasetUuid: 39471eba-cbaa-4b4f-8fe8-4fc06ad5f411
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 1
+    - 2
+    - 3
+    - 5
+    - 6
+    - 7
+    - 8
+    - 16
+    - 17
+    tabsInScope: []
+  - id: NATIVE_FILTER-92L3o_JsV0
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: Court
+    filterType: filter_select
+    targets:
+    - column:
+        name: court_name_en
+      datasetUuid: 39471eba-cbaa-4b4f-8fe8-4fc06ad5f411
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    tabsInScope: []
+  - id: NATIVE_FILTER-Ky0zHEyfa6
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: Governorate
+    filterType: filter_select
+    targets:
+    - column:
+        name: governorate_name_en
+      datasetUuid: 39471eba-cbaa-4b4f-8fe8-4fc06ad5f411
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    tabsInScope: []
+  - id: NATIVE_FILTER-xXUrszPjtv
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: Year
+    filterType: filter_select
+    targets:
+    - column:
+        name: case_year
+      datasetUuid: 39471eba-cbaa-4b4f-8fe8-4fc06ad5f411
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    tabsInScope: []
+  - id: NATIVE_FILTER-NdUbBMHetH
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: Status Category
+    filterType: filter_select
+    targets:
+    - column:
+        name: status_category
+      datasetUuid: 39471eba-cbaa-4b4f-8fe8-4fc06ad5f411
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    tabsInScope: []
+  - id: NATIVE_FILTER-Ns7XxyWGEw
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: Judge
+    filterType: filter_select
+    targets:
+    - column:
+        name: judge_name_en
+      datasetUuid: 39471eba-cbaa-4b4f-8fe8-4fc06ad5f411
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 1
+    - 2
+    - 3
+    - 5
+    - 6
+    - 7
+    - 8
+    - 16
+    - 17
+    tabsInScope: []
+  - id: NATIVE_FILTER-HYF8oN93DS
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: Circuit
+    filterType: filter_select
+    targets:
+    - column:
+        name: circuit_name_en
+      datasetUuid: 39471eba-cbaa-4b4f-8fe8-4fc06ad5f411
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 1
+    - 2
+    - 3
+    - 5
+    - 6
+    - 7
+    - 8
+    - 16
+    - 17
+    tabsInScope: []
+  shared_label_colors:
+    OM-BU: '#1FA8C9'
+    OM-ZA: '#454E7C'
+    OM-MA: '#5AC189'
+    OM-WU: '#FF7F44'
+    OM-MU: '#666666'
+    OM-SS: '#E04355'
+    OM-BS: '#FCC700'
+    OM-BJ: '#A868B7'
+    OM-DA: '#3CCCCB'
+    OM-SJ: '#A38F79'
+    OM-ZU: '#8FD3E4'
+    Total Cases: '#1FA8C9'
+    Total Filed: '#1FA8C9'
+    Closed: '#C9A84C'
+    Average Case Duration Days: '#1FA8C9'
+  color_scheme_domain:
+  - '#1FA8C9'
+  - '#454E7C'
+  - '#5AC189'
+  - '#FF7F44'
+  - '#666666'
+  - '#E04355'
+  - '#FCC700'
+  - '#A868B7'
+  - '#3CCCCB'
+  - '#A38F79'
+  - '#8FD3E4'
+  - '#A1A6BD'
+  - '#ACE1C4'
+  - '#FEC0A1'
+  - '#B2B2B2'
+  - '#EFA1AA'
+  - '#FDE380'
+  - '#D3B3DA'
+  - '#9EE5E5'
+  - '#D1C6BC'
+version: 1.0.0

@@ -1,0 +1,44 @@
+slice_name: SLA Breach Rate
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 7__table
+  viz_type: big_number_total
+  metric:
+    expressionType: SQL
+    sqlExpression: CAST(SUM(CASE WHEN is_sla_breached THEN 1 ELSE 0 END) AS DOUBLE)
+      / COUNT(*)
+    column: null
+    aggregate: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: CAST(SUM(CASE WHEN is_sla_breached THEN 1 ELSE 0 END) AS DOUBLE) / COUNT(*)
+    optionName: metric_dnjxz2oq4bf_y9tk94wy7v
+  adhoc_filters:
+  - clause: WHERE
+    subject: filing_date
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    expressionType: SIMPLE
+  subheader: SLA Breach Rate
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  y_axis_format: ',.1%'
+  time_format: smart_date
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 2
+query_context: '{"datasource":{"id":7,"type":"table"},"force":false,"queries":[{"filters":[{"col":"filing_date","op":"TEMPORAL_RANGE","val":"No
+  filter"}],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[{"expressionType":"SQL","sqlExpression":"CAST(SUM(CASE
+  WHEN is_sla_breached THEN 1 ELSE 0 END) AS DOUBLE) / COUNT(*)","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"CAST(SUM(CASE
+  WHEN is_sla_breached THEN 1 ELSE 0 END) AS DOUBLE) / COUNT(*)","optionName":"metric_dnjxz2oq4bf_y9tk94wy7v"}],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"7__table","viz_type":"big_number_total","metric":{"expressionType":"SQL","sqlExpression":"CAST(SUM(CASE
+  WHEN is_sla_breached THEN 1 ELSE 0 END) AS DOUBLE) / COUNT(*)","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"CAST(SUM(CASE
+  WHEN is_sla_breached THEN 1 ELSE 0 END) AS DOUBLE) / COUNT(*)","optionName":"metric_dnjxz2oq4bf_y9tk94wy7v"},"adhoc_filters":[{"clause":"WHERE","subject":"filing_date","operator":"TEMPORAL_RANGE","comparator":"No
+  filter","expressionType":"SIMPLE"}],"subheader":"SLA Breach Rate","header_font_size":0.4,"subheader_font_size":0.15,"y_axis_format":",.1%","time_format":"smart_date","conditional_formatting":[],"extra_form_data":{},"dashboards":[2],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: c0959ecb-c8d6-427c-95d1-77e5a182c9f2
+version: 1.0.0
+dataset_uuid: 39471eba-cbaa-4b4f-8fe8-4fc06ad5f411
