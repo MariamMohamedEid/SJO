@@ -1,0 +1,153 @@
+version: 2
+
+models:
+
+  # ============================================================
+  # stg_judges
+  # ============================================================
+  - name: stg_judges
+    description: "Typed and cleaned judges from hive landing"
+
+    columns:
+      - name: judge_id
+        tests: [not_null, unique]
+
+      - name: national_id
+        tests: [not_null]
+
+      - name: full_name
+        tests: [not_null]
+
+      - name: appointment_date
+        tests: [not_null]
+
+      - name: court_level
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Supreme', 'Appeal', 'First Instance']
+
+
+  # ============================================================
+  # stg_cases
+  # ============================================================
+  - name: stg_cases
+    description: "Typed and cleaned cases table"
+
+    columns:
+      - name: case_id
+        tests: [not_null, unique]
+
+      - name: case_number
+        tests: [not_null, unique]
+
+      - name: court_id
+        tests: [not_null]
+
+      - name: circuit_id
+        tests: [not_null]
+
+      - name: status_id
+        tests: [not_null]
+
+      - name: filing_date
+        tests: [not_null]
+
+
+  # ============================================================
+  # stg_courts
+  # ============================================================
+  - name: stg_courts
+    description: "Typed courts table with hierarchy references"
+
+    columns:
+      - name: court_id
+        tests: [not_null, unique]
+
+      - name: court_level
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Supreme', 'Appeal', 'First Instance']
+
+      - name: governorate_id
+        tests: [not_null]
+
+
+  # ============================================================
+  # stg_circuits
+  # ============================================================
+  - name: stg_circuits
+    description: "Typed circuits table with classification attributes"
+
+    columns:
+      - name: circuit_id
+        tests: [not_null, unique]
+
+      - name: court_id
+        tests: [not_null]
+
+      - name: panel_type
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['فردي', 'ثلاثي', 'خماسي']
+
+
+  # ============================================================
+  # stg_hearings
+  # ============================================================
+  - name: stg_hearings
+    description: "Typed hearings table representing case events"
+
+    columns:
+      - name: hearing_id
+        tests: [not_null, unique]
+
+      - name: case_id
+        tests: [not_null]
+
+      - name: hearing_date
+        tests: [not_null]
+
+
+  # ============================================================
+  # stg_judge_court_assignments
+  # ============================================================
+  - name: stg_judge_court_assignments
+    description: "Tracks assignment of judges to courts and circuits over time"
+
+    columns:
+      - name: assignment_id
+        tests: [not_null, unique]
+
+      - name: judge_id
+        tests: [not_null]
+
+      - name: court_id
+        tests: [not_null]
+
+      - name: assigned_from
+        tests: [not_null]
+
+
+  # ============================================================
+  # stg_case_status_history
+  # ============================================================
+  - name: stg_case_status_history
+    description: "Tracks lifecycle status changes for cases"
+
+    columns:
+      - name: history_id
+        tests: [not_null, unique]
+
+      - name: case_id
+        tests: [not_null]
+
+      - name: status_id
+        tests: [not_null]
+
+      - name: changed_at
+        tests: [not_null]

@@ -1,0 +1,13 @@
+sjc:
+  target: dev
+  outputs:
+    dev:
+      type: trino
+      method: none
+      host: trino
+      port: 8080
+      user: admin
+      database: iceberg          # target catalog (where dbt writes)
+      schema: staging            # target schema inside iceberg catalog
+      threads: 4
+      http_scheme: http

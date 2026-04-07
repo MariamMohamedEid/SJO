@@ -1,0 +1,111 @@
+version: 2
+
+models:
+  - name: dim_court
+    description: "Court dimension — includes full geographic hierarchy (court → wilayat → governorate)"
+    columns:
+      - name: court_key
+        description: "Surrogate key "
+        tests: [unique, not_null]
+      - name: court_id
+        description: "Natural key from source"
+        tests: [unique, not_null]
+      - name: court_level
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Supreme', 'Appeal', 'First Instance']
+      - name: governorate_code
+        tests: [not_null]
+
+  - name: dim_circuit
+    description: "Circuit dimension — the primary case-type analytical axis"
+    columns:
+      - name: circuit_key
+        tests: [unique, not_null]
+      - name: circuit_id
+        tests: [unique, not_null]
+      - name: panel_type
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['فردي', 'ثلاثي', 'خماسي']
+      - name: case_category
+        tests: [not_null]
+
+  - name: dim_judge
+    description: "Judge dimension — court_level enforces hierarchy assignment in tests"
+    columns:
+      - name: judge_key
+        tests: [unique, not_null]
+      - name: judge_id
+        tests: [unique, not_null]
+      - name: court_level
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Supreme', 'Appeal', 'First Instance']
+
+  - name: dim_date
+    description: "Date dimension — role-played four times in fact_cases"
+    columns:
+      - name: date_key
+        description: "Integer in YYYYMMDD format — matches the FK format in fact_cases"
+        tests: [unique, not_null]
+      - name: full_date
+        tests: [unique, not_null]
+
+  - name: dim_case_status
+    description: "Case status dimension with lifecycle categorization"
+    columns:
+      - name: status_key
+        tests: [unique, not_null]
+      - name: status_id
+        tests: [unique, not_null]
+      - name: status_category
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Active', 'Suspended', 'Closed']
+
+  - name: fact_cases
+    description: >
+      Core fact table — transaction grain, one row per case.
+      All four date keys role-play against dim_date.
+      In Power BI: create four inactive relationships and activate per visual.
+    columns:
+      - name: case_number
+        description: "Degenerate dimension — the source case identifier"
+        tests: [unique, not_null]
+      - name: court_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_court')
+                field: court_key
+      - name: circuit_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_circuit')
+                field: circuit_key
+      - name: status_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_case_status')
+                field: status_key
+      - name: filing_date_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_date')
+                field: date_key
+      - name: case_duration_days
+        description: "NULL for open/active cases — only populated when closure_date is known"
+      - name: is_sla_breached
+        description: "NULL for open cases, true/false for closed cases"

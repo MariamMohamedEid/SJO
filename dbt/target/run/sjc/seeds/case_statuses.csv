@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table "iceberg"."staging"."case_statuses" (status_id INTEGER,status_code VARCHAR,status_name VARCHAR,status_name_en VARCHAR,status_category VARCHAR,is_terminal boolean) 
+  ;
+    -- dbt seed --
+    
+          insert into "iceberg"."staging"."case_statuses" (status_id, status_code, status_name, status_name_en, status_category, is_terminal) values
+          (?,?,?,?,?,?),(?,?,?,?,?,?),(?,?,?,?,?,?),(?,?,?,?,?,?),(?,?,?,?,?,?),(?,?,?,?,?,?),(?,?,?,?,?,?),(?,?,?,?,?,?),(?,?,?,?,?,?)
+      
+
+;
+  

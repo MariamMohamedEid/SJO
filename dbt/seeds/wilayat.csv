@@ -1,0 +1,69 @@
+"wilayat_id","wilayat_name","wilayat_name_en","governorate_id"
+1,مسقط,Muscat,1
+2,مطرح,Mutrah,1
+3,بوشر,Bausher,1
+4,السيب,Seeb,1
+5,قريات,Qurayyat,1
+6,العامرات,Al Amerat,1
+7,خصب,Khasab,2
+8,بخاء,Bukha,2
+9,دبا,Dibba,2
+10,مدحاء,Madha,2
+11,البريمي,Al Buraimi,3
+12,محضة,Mahdah,3
+13,ينقل,Yanqul,3
+14,نزوى,Nizwa,4
+15,بهلاء,Bahla,4
+16,منح,Manah,4
+17,سمائل,Samail,4
+18,إزكي,Izki,4
+19,الحمراء,Al Hamra,4
+20,عبري الداخلية,Adam,4
+21,آدم,Adam,4
+22,بدبد,Badbad,4
+23,صحار,Sohar,5
+24,شناص,Shinas,5
+25,لوى,Liwa,5
+26,صحم,Saham,5
+27,الخابورة,Al Khabourah,5
+28,السويق,As Suwayq,5
+29,المصنعة,Al Musannah,5
+30,وادي المعاول,Wadi Al Maawil,5
+31,الرستاق,Rustaq,6
+32,نخل,Nakhl,6
+33,العوابي,Al Awabi,6
+34,بركاء,Barka,6
+35,الوادي الكبير,Al Wadi Al Kabir,6
+36,ودام,Wudam,6
+37,المصنعة جنوب,Al Musannah South,6
+38,إبراء,Ibra,7
+39,المضيبي,Al Mudhaybi,7
+40,دماء والطائيين,Dima Wa Al Tayyieen,7
+41,وادي بني خالد,Wadi Bani Khalid,7
+42,بدية,Bidiyah,7
+43,العامرات شرقية,Al Amerat East,7
+44,قريات شرقية,Qurayyat East,7
+45,صور,Sur,8
+46,جعلان بني بو علي,Jalan Bani Bu Ali,8
+47,مصيرة,Masirah,8
+48,جعلان بني بو حسن,Jalan Bani Bu Hassan,8
+49,القابل,Al Qabil,8
+50,الكامل والوافي,Al Kamil Wal Wafi,8
+51,ضماء,Dimma,8
+52,هيماء,Haima,9
+53,الدقم,Duqm,9
+54,محوت,Mahout,9
+55,الجازر,Al Jazir,9
+56,صلالة,Salalah,10
+57,طاقة,Taqah,10
+58,مرباط,Mirbat,10
+59,سدح,Sadah,10
+60,رخيوت,Rakhyut,10
+61,ضلكوت,Dhalkhout,10
+62,مقشن,Muqshin,10
+63,شليم وجزر الحلانيات,Shalim Wa Jazur Al Hallaniyat,10
+64,الدهاريز,Al Dahariz,10
+65,طريف,Tharif,10
+66,عبري,Ibri,11
+67,ضنك,Dhank,11
+68,ينقل الظاهرة,Yanqul Al Dhahirah,11

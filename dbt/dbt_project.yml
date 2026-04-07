@@ -1,0 +1,47 @@
+name: 'sjc'
+version: '1.0.0'
+config-version: 2
+
+profile: 'sjc'
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+models:
+  sjc:
+
+    # --------------------------
+    # STAGING
+    # --------------------------
+    staging:
+      +materialized: table
+      +database: iceberg
+      +schema: staging
+
+      +properties:
+        format: "'PARQUET'"        # ← no + here
+        partitioning: "ARRAY[]"    # ← no + here
+
+    # --------------------------
+    # INTERMEDIATE
+    # --------------------------
+    intermediate:
+      +materialized: view
+      +database: iceberg
+      +schema: intermediate
+
+    # --------------------------
+    # MARTS
+    # --------------------------
+    marts:
+      +materialized: table
+      +database: iceberg
+      +schema: marts
+
+      +properties:
+        format: "'PARQUET'"        # ← no + here
+        partitioning: "ARRAY[]"    # ← no + here
+
+seeds:
+  sjc:
+    +schema: staging
+    +quote_columns: false

@@ -1,0 +1,10 @@
+"status_id","status_code","status_name","status_name_en","status_category","is_terminal"
+1,FILED,مقدم,Filed,Active,false
+2,SCHEDULED,مجدول,Hearing Scheduled,Active,false
+3,IN_PROGRESS,قيد النظر,In Progress,Active,false
+4,ADJOURNED,مؤجل,Adjourned,Suspended,false
+5,PENDING_DOC,ناقص مستندات,Pending Documentation,Suspended,false
+6,JUDGED,صدر حكم,Judgment Issued,Closed,true
+7,SETTLED,منهي بتسوية,Settled,Closed,true
+8,WITHDRAWN,مشطوب,Withdrawn,Closed,true
+9,DISMISSED,مرفوض,Dismissed,Closed,true

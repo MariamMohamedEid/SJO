@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: sjc_source
+    database: hive                 # reads from hive catalog
+    schema: landing                # your raw schema name
+    tables:
+      - name: judges
+      - name: cases
+      - name: case_status_history
+      - name: case_statuses
+      - name: circuits
+      - name: courts
+      - name: governorates
+      - name: hearings
+      - name: judge_court_assignments
+      - name: wilayat

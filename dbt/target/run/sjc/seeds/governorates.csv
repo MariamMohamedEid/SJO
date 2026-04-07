@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table "iceberg"."staging"."governorates" (governorate_id INTEGER,governorate_name VARCHAR,governorate_name_en VARCHAR,governorate_code VARCHAR) 
+  ;
+    -- dbt seed --
+    
+          insert into "iceberg"."staging"."governorates" (governorate_id, governorate_name, governorate_name_en, governorate_code) values
+          (?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?)
+      
+
+;
+  
