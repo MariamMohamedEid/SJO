@@ -454,9 +454,9 @@ The platform delivers three role-based dashboards, each designed for a specific 
 | Case Volume by Category   | Bar Chart   | `COUNT` by case_category                                           | Case type distribution                 |
 | Backlog by Court          | Bar Chart   | `COUNT` Active/Suspended by court                                  | Court capacity pressure                |
 | Judge Workload            | Table       | `COUNT(CASE)` by judge_name_en                                     | Workload imbalance detection           |
-![[![alt text](image-1.png)]]
-![[![alt text](image-2.png)]]
-![[![alt text](image-3.png)]]
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
 ### 7.2 Dashboard 2 — Financial & Administrative Analytics
 
 **Audience:** Finance officers and administrative leadership
@@ -474,8 +474,8 @@ The platform delivers three role-based dashboards, each designed for a specific 
 |Revenue Trend|Line Chart|Fees + execution over time|Revenue trajectory|
 |Execution Revenue by Court|Bar Chart|`SUM(execution_revenue)` by court|Top performing courts|
 |Monthly Financials by Category|Bar Chart|Fees + execution by case_category|Category revenue breakdown|
-![[![alt text](image-4.png)]]
-![[![alt text](image-5.png)]]
+![alt text](image-4.png)
+![alt text](image-5.png)
 
 ### 7.3 Dashboard 3 — Executive Strategic Overview
 
@@ -493,9 +493,9 @@ The platform delivers three role-based dashboards, each designed for a specific 
 |Filed vs Closed Gap|Area Chart|Filed vs Closed by month|Backlog growth or reduction|
 |Clearance Rate by Governorate|Table|Clearance rate per governorate|Regional equity analysis|
 |Case Volume by Governorate|Map / Treemap|`COUNT` per governorate|Geographic demand distribution|
-![[![alt text](image-6.png)]]
-![[![alt text](image-7.png)]]
-![[![alt text](image-8.png)]]
+![alt text](image-6.png)
+![alt text](image-7.png)
+![alt text](image-8.png)
 
 
 ---
